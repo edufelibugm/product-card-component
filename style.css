@@ -1,0 +1,165 @@
+/*
+    ### Primary
+
+    - Dark cyan: hsl(158, 36%, 37%)
+    - Cream: hsl(30, 38%, 92%)
+
+    ### Neutral
+
+    - Very dark blue: hsl(212, 21%, 14%)
+    - Dark grayish blue: hsl(228, 12%, 48%)
+    - White: hsl(0, 0%, 100%)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+/*
+    font-family: 'Montserrat', sans-serif;
+    Weights: 500, 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+/*
+    font-family: 'Fraunces', serif;
+    Weights: 700
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+
+}
+
+p {
+    font-size: 12px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.target {
+    max-width: 540px;
+    max-height: 410px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.target .img {
+    max-height: 410px;
+    border-radius: 10px 0 0 10px;
+    background: url(images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.target-content {
+    padding: 25px;
+    text-align: left;
+}
+
+.target h2 {
+    color: hsl(228, 12%, 48%);
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.target h1 {
+    margin: 0 60px 25px 0;
+    font-family: 'Fraunces', serif;
+}
+
+.target .price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.target .price .green {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 20px;
+}
+.target .price .tached {
+    text-decoration: line-through;
+}
+
+.target .add-cart {
+    width: 210px;
+    height: 42px;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.target .add-cart img {
+    height: 15px;
+    width: 15px;
+    object-fit: contain;
+    margin-right: 5px;
+    padding-top: 2px;
+}
+
+.attribution { 
+    position: absolute;
+    top: 0;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 540px) {
+    .target {
+        max-width: 342px;
+        min-height: 610px;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        transition: all .5s ease-in-out;
+    }
+    .target .img {
+        min-height: 240px;
+        min-width: 342px;
+        border-radius: 10px 10px 0 0;
+        background: url(images/image-product-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .target .add-cart {
+        width: 295px;
+        height: 42px;
+        background-color: hsl(158, 36%, 37%);
+        color: #fff;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+}
